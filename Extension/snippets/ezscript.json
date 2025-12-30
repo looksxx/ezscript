@@ -1,0 +1,773 @@
+{
+  "Let Variable": {
+    "prefix": "let",
+    "body": ["let ${1:variable} be ${2:value}"],
+    "description": "Create a variable with 'let'"
+  },
+  
+  "Multiple Variables": {
+    "prefix": "letmulti",
+    "body": ["let ${1:var1}, ${2:var2} be ${3:value1}, ${4:value2}"],
+    "description": "Create multiple variables"
+  },
+  
+  "String Interpolation": {
+    "prefix": "interpolate",
+    "body": ["\"${1:text} {${2:variable}} ${3:more text}\""],
+    "description": "String with variable interpolation"
+  },
+
+  "Print": {
+    "prefix": "print",
+    "body": ["print(${1:expr})"],
+    "description": "Print a value or expression"
+  },
+
+  "Print Multiple": {
+    "prefix": "printm",
+    "body": ["print(${1:expr1}, ${2:expr2}, ${3:expr3})"],
+    "description": "Print multiple values"
+  },
+
+  "Print with Interpolation": {
+    "prefix": "printi",
+    "body": ["print(\"${1:text} {${2:variable}}\")"],
+    "description": "Print with string interpolation"
+  },
+  
+  "Input": {
+    "prefix": "input",
+    "body": ["input(\"${2:prompt}\")"],
+    "description": "Get user input"
+  },
+  
+  "If Statement": {
+    "prefix": "if",
+    "body": [
+      "if ${1:condition} then",
+      "    ${2:# code here}"
+    ],
+    "description": "If statement with 'then'"
+  },
+  
+  "If with Colon": {
+    "prefix": "ifc",
+    "body": [
+      "if ${1:condition}:",
+      "    ${2:# code here}"
+    ],
+    "description": "If statement with colon"
+  },
+  
+  "If-Else": {
+    "prefix": "if else",
+    "body": [
+      "if ${1:condition} then",
+      "    ${2:# if true}",
+      "else",
+      "    ${3:# if false}"
+    ],
+    "description": "If-else statement"
+  },
+  
+  "Else": {
+    "prefix": "else",
+    "body": [
+      "else",
+      "    ${1:# code here}"
+    ],
+    "description": "Else Statement"
+  },
+  "If-Elif-Else": {
+    "prefix": "if elif else",
+    "body": [
+      "if ${1:condition1} then",
+      "    ${2:# first condition}",
+      "elif ${3:condition2} then",
+      "    ${4:# second condition}",
+      "else",
+      "    ${5:# default case}"
+    ],
+    "description": "If-elif-else statement"
+  },
+  "Is": {
+    "prefix": "is",
+    "body": [
+      "is"
+    ],
+    "description": ""
+  },
+  "Natural Language If (is less than)": {
+    "prefix": "islessthan",
+    "body": [
+      "is less than"
+    ],
+    "description": "If lesser than"
+  },
+  "And": {
+    "prefix": "and",
+    "body": [
+      "and"
+    ],
+    "description": "compares two conditions and returns true if both are true"
+  },
+  "Is Lesser Or Equal To": {
+    "prefix": "islesserorequalto",
+    "body": [
+      "is lesser or equal to"
+    ],
+    "description": "checks if a value is less than or equal to another"
+  },
+  "Is Greater Or Equal To": {
+    "prefix": "isgreaterorequalto",
+    "body": [
+      "is greater or equal to"
+    ],
+    "description": "checks if a value is greater than or equal to another"
+  },
+  "Is Not": {
+    "prefix": "isnot",
+    "body": [
+      "is not"
+    ],
+    "description": "checks something is not something else"
+  },
+  "Is Not Equal": {
+    "prefix": "isnotequalto",
+    "body": [
+      "is not equal to"
+    ],
+    "description": "checks if two values are not equal"
+  },
+  "Natural Language If (is equal to)": {
+    "prefix": "isequalto",
+    "body": [
+      "is equal to"
+    ],
+    "description": "If with natural language comparison"
+  },
+  
+  "Natural Language If (greater than)": {
+    "prefix": "isgreaterthan",
+    "body": [
+      "is greater than"
+    ],
+    "description": "if greater than something"
+  },
+  
+  "While Loop": {
+    "prefix": "while",
+    "body": [
+      "while ${1:condition} then",
+      "    ${2:# code here}"
+    ],
+    "description": "While loop with 'then'"
+  },
+  
+  "While with Colon": {
+    "prefix": "whilec",
+    "body": [
+      "while ${1:condition}:",
+      "    ${2:# code here}"
+    ],
+    "description": "While loop with colon"
+  },
+  
+  "Loop N Times": {
+    "prefix": "loop",
+    "body": [
+      "loop ${1:count} times:"
+    ],
+    "description": "Loop N times"
+  },
+  
+  "Loop with Index": {
+    "prefix": "loopi",
+    "body": [
+      "loop ${1:count} times:",
+      "    print loop_index",
+      "    ${2:# code here}"
+    ],
+    "description": "Loop with loop_index variable"
+  },
+  
+  "For Each Loop": {
+    "prefix": "foreach",
+    "body": [
+      "for each ${1:item} in ${2:list} then",
+      "    ${3:# code here}"
+    ],
+    "description": "For each loop with 'then'"
+  },
+  
+  "For Each with Colon": {
+    "prefix": "foreachc",
+    "body": [
+      "for each ${1:item} in ${2:list}:",
+      "    ${3:# code here}"
+    ],
+    "description": "For each loop with colon"
+  },
+  
+  "Break": {
+    "prefix": "break",
+    "body": ["break"],
+    "description": "Break out of a loop"
+  },
+  
+  "Continue": {
+    "prefix": "continue",
+    "body": ["continue"],
+    "description": "Continue to next iteration"
+  },
+  
+  "Function": {
+    "prefix": "function",
+    "body": [
+      "function ${1:name}(${2:params}):",
+      "    ${3:# code here}",
+      "    return ${4:value}"
+    ],
+    "description": "Define a function"
+  },
+  
+  "Function with Default Parameter": {
+    "prefix": "functiondef",
+    "body": [
+      "function ${1:name}(${2:param1}, ${3:param2} = ${4:default}):",
+      "    ${5:# code here}",
+      "    return ${6:value}"
+    ],
+    "description": "Function with default parameter"
+  },
+  
+  "Return": {
+    "prefix": "return",
+    "body": ["return ${1:value}"],
+    "description": "Return a value"
+  },
+  
+  "Return Multiple": {
+    "prefix": "returnm",
+    "body": ["return ${1:value1}, ${2:value2}, ${3:value3}"],
+    "description": "Return multiple values"
+  },
+  
+  "Try-Catch": {
+    "prefix": "try",
+    "body": [
+      "try:",
+      "    ${1:# code that might fail}",
+      "catch:",
+      "    ${2:# handle error}"
+    ],
+    "description": "Try-catch error handling"
+  },
+  
+  "Try-Catch with Error Variable": {
+    "prefix": "trye",
+    "body": [
+      "try:",
+      "    ${1:# code that might fail}",
+      "catch ${2:error}:",
+      "    print \"Error:\", ${2:error}"
+    ],
+    "description": "Try-catch with error variable"
+  },
+  
+  "Throw Error": {
+    "prefix": "throw",
+    "body": ["throw \"${1:error message}\""],
+    "description": "Throw an error"
+  },
+  
+  "Wait": {
+    "prefix": "wait",
+    "body": ["wait ${1:time} seconds"],
+    "description": "Wait for specified seconds"
+  },
+  
+  "Read File": {
+    "prefix": "readfile",
+    "body": ["let ${1:variable} be read file \"${2:filename.txt}\""],
+    "description": "Read contents from a file"
+  },
+  
+  "Write File": {
+    "prefix": "writefile",
+    "body": ["write \"${1:content}\" to file \"${2:filename.txt}\""],
+    "description": "Write content to a file"
+  },
+  
+  "Append File": {
+    "prefix": "appendfile",
+    "body": ["append \"${1:content}\" to file \"${2:filename.txt}\""],
+    "description": "Append content to a file"
+  },
+  
+  "Random Number": {
+    "prefix": "random",
+    "body": ["random(${2:min}, ${3:max})"],
+    "description": "Generate random integer"
+  },
+  
+  "Random Choice": {
+    "prefix": "choice",
+    "body": ["choice(${2:list})"],
+    "description": "Random choice from list"
+  },
+  
+  "Random Float": {
+    "prefix": "uniform",
+    "body": ["uniform(${2:min}, ${3:max})"],
+    "description": "Random float between min and max"
+  },
+  
+  "Current Time": {
+    "prefix": "time",
+    "body": ["current_time()"],
+    "description": "Get current time"
+  },
+  
+  "Current Date": {
+    "prefix": "date",
+    "body": ["current_date()"],
+    "description": "Get current date"
+  },
+  
+  "Current DateTime": {
+    "prefix": "datetime",
+    "body": ["current_datetime()"],
+    "description": "Get current date and time"
+  },
+  
+  "Timestamp": {
+    "prefix": "timestamp",
+    "body": ["timestamp()"],
+    "description": "Get Unix timestamp"
+  },
+  
+  "List": {
+    "prefix": "list",
+    "body": ["let ${1:list_name} be [${2:item1}, ${3:item2}, ${4:item3}]"],
+    "description": "Create a list"
+  },
+  
+  "Empty List": {
+    "prefix": "listempty",
+    "body": ["let ${1:list_name} be []"],
+    "description": "Create an empty list"
+  },
+  
+  "List Append": {
+    "prefix": "append",
+    "body": ["${1:list}.append(${2:item})"],
+    "description": "Append item to list"
+  },
+  
+  "List Remove": {
+    "prefix": "remove",
+    "body": ["${1:list}.remove(${2:item})"],
+    "description": "Remove item from list"
+  },
+  
+  "List Pop": {
+    "prefix": "pop",
+    "body": ["let ${1:item} be ${2:list}.pop()"],
+    "description": "Pop last item from list"
+  },
+  
+  "List Sort": {
+    "prefix": "sort",
+    "body": ["${1:list}.sort()"],
+    "description": "Sort a list"
+  },
+  
+  "List Reverse": {
+    "prefix": "reverse",
+    "body": ["${1:list}.reverse()"],
+    "description": "Reverse a list"
+  },
+  
+  "String Upper": {
+    "prefix": "upper",
+    "body": ["let ${1:result} be ${2:string}.upper()"],
+    "description": "Convert string to uppercase"
+  },
+  
+  "String Lower": {
+    "prefix": "lower",
+    "body": ["let ${1:result} be ${2:string}.lower()"],
+    "description": "Convert string to lowercase"
+  },
+  
+  "String Split": {
+    "prefix": "split",
+    "body": ["let ${1:result} be ${2:string}.split(\"${3:delimiter}\")"],
+    "description": "Split string into list"
+  },
+  
+  "String Replace": {
+    "prefix": "replace",
+    "body": ["let ${1:result} be ${2:string}.replace(\"${3:old}\", \"${4:new}\")"],
+    "description": "Replace in string"
+  },
+  
+  "String Strip": {
+    "prefix": "strip",
+    "body": ["let ${1:result} be ${2:string}.strip()"],
+    "description": "Remove whitespace from string"
+  },
+  
+  "Dictionary": {
+    "prefix": "dict",
+    "body": ["let ${1:dict_name} be {\"${2:key}\": ${3:value}, \"${4:key2}\": ${5:value2}}"],
+    "description": "Create a dictionary"
+  },
+  
+  "Range": {
+    "prefix": "range",
+    "body": ["range(${1:stop})"],
+    "description": "Generate range of numbers"
+  },
+  
+  "Range with Start": {
+    "prefix": "ranges",
+    "body": ["range(${1:start}, ${2:stop})"],
+    "description": "Generate range with start and stop"
+  },
+  
+  "Length": {
+    "prefix": "len",
+    "body": ["len(${1:object})"],
+    "description": "Get length of list or string"
+  },
+  
+  "Convert to Int": {
+    "prefix": "int",
+    "body": ["int(${1:value})"],
+    "description": "Convert to integer"
+  },
+  
+  "Convert to Float": {
+    "prefix": "float",
+    "body": ["float(${1:value})"],
+    "description": "Convert to float"
+  },
+  
+  "Convert to String": {
+    "prefix": "str",
+    "body": ["str(${1:value})"],
+    "description": "Convert to string"
+  },
+  
+  "Sorted": {
+    "prefix": "sorted",
+    "body": ["let ${1:result} be sorted(${2:list})"],
+    "description": "Return sorted copy of list"
+  },
+  
+  "Sum": {
+    "prefix": "sum",
+    "body": ["let ${1:total} be sum(${2:list})"],
+    "description": "Sum all values in list"
+  },
+  
+  "Max": {
+    "prefix": "max",
+    "body": ["let ${1:maximum} be max(${2:list})"],
+    "description": "Get maximum value"
+  },
+  
+  "Min": {
+    "prefix": "min",
+    "body": ["let ${1:minimum} be min(${2:list})"],
+    "description": "Get minimum value"
+  },
+  
+  "Absolute": {
+    "prefix": "abs",
+    "body": ["abs(${1:number})"],
+    "description": "Get absolute value"
+  },
+  
+  "Round": {
+    "prefix": "round",
+    "body": ["round(${1:number})"],
+    "description": "Round a number"
+  },
+  
+  "Augmented Add": {
+    "prefix": "+=",
+    "body": ["${1:variable} += ${2:value}"],
+    "description": "Add and assign"
+  },
+  
+  "Augmented Subtract": {
+    "prefix": "-=",
+    "body": ["${1:variable} -= ${2:value}"],
+    "description": "Subtract and assign"
+  },
+  
+  "Augmented Multiply": {
+    "prefix": "*=",
+    "body": ["${1:variable} *= ${2:value}"],
+    "description": "Multiply and assign"
+  },
+  
+  "Augmented Divide": {
+    "prefix": "/=",
+    "body": ["${1:variable} /= ${2:value}"],
+    "description": "Divide and assign"
+  },
+  
+  "Create Window": {
+  "prefix": "createWindow",
+  "body": ["createWindow(${1:800}, ${2:600}, \"${3:My Window}\")"],
+  "description": "Create a window"
+},
+
+"Create Window Full": {
+  "prefix": "createWindowFull",
+  "body": ["createWindow(${1:800}, ${2:600}, \"${3:My Window}\", ${4|true,false|}, ${5|true,false|}, ${6|true,false|})"],
+  "description": "Create window with resizable, alwaysOnTop, canMaximize options"
+},
+
+"Set Window Title": {
+  "prefix": "setWindowTitle",
+  "body": ["setWindowTitle(\"${1:New Title}\")"],
+  "description": "Set window title"
+},
+
+"Set Window Size": {
+  "prefix": "setWindowSize",
+  "body": ["setWindowSize(${1:width}, ${2:height})"],
+  "description": "Set window size"
+},
+
+"Set Background": {
+  "prefix": "setBackground",
+  "body": ["setBackground(\"${1:lightblue}\")"],
+  "description": "Set window background color"
+},
+
+"Draw Circle": {
+  "prefix": "drawCircle",
+  "body": ["drawCircle(${1:x}, ${2:y}, ${3:radius})"],
+  "description": "Draw a circle"
+},
+
+"Draw Circle Full": {
+  "prefix": "drawCircleFull",
+  "body": ["drawCircle(${1:x}, ${2:y}, ${3:radius}, \"${4:black}\", \"${5:red}\")"],
+  "description": "Draw circle with color and fill"
+},
+
+"Draw Rectangle": {
+  "prefix": "drawRectangle",
+  "body": ["drawRectangle(${1:x1}, ${2:y1}, ${3:x2}, ${4:y2})"],
+  "description": "Draw a rectangle"
+},
+
+"Draw Rectangle Full": {
+  "prefix": "drawRectangleFull",
+  "body": ["drawRectangle(${1:x1}, ${2:y1}, ${3:x2}, ${4:y2}, \"${5:black}\", \"${6:blue}\")"],
+  "description": "Draw rectangle with color and fill"
+},
+
+"Draw Line": {
+  "prefix": "drawLine",
+  "body": ["drawLine(${1:x1}, ${2:y1}, ${3:x2}, ${4:y2})"],
+  "description": "Draw a line"
+},
+
+"Draw Line Full": {
+  "prefix": "drawLineFull",
+  "body": ["drawLine(${1:x1}, ${2:y1}, ${3:x2}, ${4:y2}, \"${5:black}\", ${6:2})"],
+  "description": "Draw line with color and width"
+},
+
+"Draw Text": {
+  "prefix": "drawText",
+  "body": ["drawText(${1:x}, ${2:y}, \"${3:text}\")"],
+  "description": "Draw text on canvas"
+},
+
+"Draw Text Full": {
+  "prefix": "drawTextFull",
+  "body": ["drawText(${1:x}, ${2:y}, \"${3:text}\", \"${4:black}\", ${5:12})"],
+  "description": "Draw text with color and font size"
+},
+
+"Load Image": {
+  "prefix": "loadImage",
+  "body": ["loadImage(\"${1:image.png}\", ${2:x}, ${3:y})"],
+  "description": "Load and display an image"
+},
+
+"Load Image Resized": {
+  "prefix": "loadImageResized",
+  "body": ["loadImage(\"${1:image.png}\", ${2:x}, ${3:y}, ${4:width}, ${5:height})"],
+  "description": "Load image with custom size"
+},
+
+"Clear Window": {
+  "prefix": "clearWindow",
+  "body": ["clearWindow()"],
+  "description": "Clear all drawn objects"
+},
+
+"Update Window": {
+  "prefix": "updateWindow",
+  "body": ["updateWindow()"],
+  "description": "Update window (for animations)"
+},
+
+"Show Window": {
+  "prefix": "showWindow",
+  "body": ["showWindow()"],
+  "description": "Display window and keep it open"
+},
+
+"Close Window": {
+  "prefix": "closeWindow",
+  "body": ["closeWindow()"],
+  "description": "Close the window"
+},
+
+"Set Window Icon": {
+  "prefix": "setWindowIcon",
+  "body": ["setWindowIcon(\"${1:icon.ico}\")"],
+  "description": "Set window icon"
+},
+
+"Remove Window Icon": {
+  "prefix": "removeWindowIcon",
+  "body": ["removeWindowIcon()"],
+  "description": "Remove window icon"
+},
+
+"On Key Down": {
+  "prefix": "onKeyDown",
+  "body": ["onKeyDown(\"${1:space}\", ${2:functionName})"],
+  "description": "Register key press callback"
+},
+
+"On Key Up": {
+  "prefix": "onKeyUp",
+  "body": ["onKeyUp(\"${1:space}\", ${2:functionName})"],
+  "description": "Register key release callback"
+},
+
+"Key States": {
+  "prefix": "keyStates",
+  "body": ["keyStates[\"${1:key}\"]"],
+  "description": "Check if key is currently pressed"
+},
+
+"Simple Window": {
+  "prefix": "simpleWindow",
+  "body": [
+    "createWindow(${1:800}, ${2:600}, \"${3:My Window}\")",
+    "setBackground(\"${4:white}\")",
+    "",
+    "${5:# Draw your graphics here}",
+    "",
+    "showWindow()"
+  ],
+  "description": "Simple window template"
+},
+
+"Animated Window": {
+  "prefix": "animatedWindow",
+  "body": [
+    "createWindow(${1:800}, ${2:600}, \"${3:Animation}\")",
+    "setBackground(\"white\")",
+    "",
+    "let x be 0",
+    "",
+    "loop ${4:100} times:",
+    "    clearWindow()",
+    "    drawCircle(x, ${5:300}, ${6:20}, \"black\", \"red\")",
+    "    x += ${7:5}",
+    "    updateWindow()",
+    "    wait 0.05 seconds",
+    "",
+    "showWindow()"
+  ],
+  "description": "Animated window template"
+},
+
+"Keyboard Controlled": {
+  "prefix": "keyboardControl",
+  "body": [
+    "let x be 400",
+    "let y be 300",
+    "",
+    "function moveLeft():",
+    "    x -= 10",
+    "",
+    "function moveRight():",
+    "    x += 10",
+    "",
+    "function moveUp():",
+    "    y -= 10",
+    "",
+    "function moveDown():",
+    "    y += 10",
+    "",
+    "createWindow(800, 600, \"Keyboard Control\")",
+    "setBackground(\"white\")",
+    "",
+    "onKeyDown(\"Left\", moveLeft)",
+    "onKeyDown(\"Right\", moveRight)",
+    "onKeyDown(\"Up\", moveUp)",
+    "onKeyDown(\"Down\", moveDown)",
+    "",
+    "showWindow()"
+  ],
+  "description": "Keyboard controlled object template"
+},
+  "Complete Program Template": {
+    "prefix": "template",
+    "body": [
+      "# ${1:Program Name}",
+      "# Author: ${2:Your Name}",
+      "# Date: ${3:CURRENT_DATE}",
+      "",
+      "# Main code",
+      "function main():",
+      "    ${4:# your code here}",
+      "    ",
+      "",
+      "# Run the program",
+      "main()"
+    ],
+    "description": "Complete program template"
+  },
+  
+  "Number Guessing Game": {
+    "prefix": "game",
+    "body": [
+      "# Number Guessing Game",
+      "let secret be random(1, 100)",
+      "let attempts be 0",
+      "",
+      "print \"Guess the number between 1 and 100!\"",
+      "",
+      "while attempts < 10 then",
+      "    let guess_str be input(\"Your guess: \")",
+      "    let guess be int(guess_str)",
+      "    attempts += 1",
+      "    ",
+      "    if guess is equal to secret then",
+      "        print \"Correct! You won in {attempts} attempts!\"",
+      "        break",
+      "    elif guess greater than secret then",
+      "        print \"Too high!\"",
+      "    else",
+      "        print \"Too low!\""
+    ],
+    "description": "Number guessing game template"
+  }
+}

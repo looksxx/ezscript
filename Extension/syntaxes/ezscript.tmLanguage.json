@@ -1,0 +1,206 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "EzScript",
+  "scopeName": "source.ez",
+  "patterns": [
+    { "include": "#comments" },
+    { "include": "#strings" },
+    { "include": "#numbers" },
+    { "include": "#keywords" },
+    { "include": "#builtins" },
+    { "include": "#operators" },
+    { "include": "#constants" },
+    { "include": "#variables" }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.line.number-sign.easyscript",
+          "match": "#.*$"
+        }
+      ]
+    },
+
+    "strings": {
+      "patterns": [
+        {
+          "name": "string.quoted.double.easyscript",
+          "begin": "\"",
+          "end": "\"",
+          "patterns": [
+            {
+              "name": "constant.character.escape.easyscript",
+              "match": "\\\\(n|t|r|\\\\|'|\")"
+            },
+            {
+              "name": "variable.interpolation.easyscript",
+              "match": "\\{[A-Za-z_][A-Za-z0-9_]*\\}"
+            }
+          ]
+        },
+        {
+          "name": "string.quoted.single.easyscript",
+          "begin": "'",
+          "end": "'",
+          "patterns": [
+            {
+              "name": "constant.character.escape.easyscript",
+              "match": "\\\\(n|t|r|\\\\|'|\")"
+            }
+          ]
+        }
+      ]
+    },
+
+    "numbers": {
+      "patterns": [
+        {
+          "name": "constant.numeric.float.easyscript",
+          "match": "\\b\\d+\\.\\d+\\b"
+        },
+        {
+          "name": "constant.numeric.integer.easyscript",
+          "match": "\\b\\d+\\b"
+        }
+      ]
+    },
+
+    "constants": {
+      "patterns": [
+        {
+          "name": "constant.language.boolean.easyscript",
+          "match": "\\b(True|False)\\b"
+        },
+        {
+          "name": "constant.language.null.easyscript",
+          "match": "\\b(None)\\b"
+        },
+        {
+          "name": "variable.language.special.easyscript",
+          "match": "\\b(loop_index)\\b"
+        }
+      ]
+    },
+
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.conditional.easyscript",
+          "match": "\\b(if|elif|else|then)\\b"
+        },
+        {
+          "name": "keyword.control.loop.easyscript",
+          "match": "\\b(while|loop|for|each|times|in)\\b"
+        },
+        {
+          "name": "keyword.control.flow.easyscript",
+          "match": "\\b(break|continue|return)\\b"
+        },
+        {
+          "name": "keyword.control.exception.easyscript",
+          "match": "\\b(try|catch|throw)\\b"
+        },
+        {
+          "name": "keyword.declaration.easyscript",
+          "match": "\\b(let|function)\\b"
+        },
+        {
+          "name": "keyword.operator.assignment.easyscript",
+          "match": "\\b(be)\\b"
+        },
+        {
+          "name": "keyword.other.io.easyscript",
+          "match": "\\b(print|input)\\b"
+        },
+        {
+          "name": "keyword.other.time.easyscript",
+          "match": "\\b(wait|second|seconds)\\b"
+        },
+        {
+          "name": "keyword.other.file.easyscript",
+          "match": "\\b(read|write|append|file)\\b"
+        }
+      ]
+    },
+
+    "builtins": {
+      "patterns": [
+        {
+          "name": "support.function.builtin.type.easyscript",
+          "match": "\\b(int|float|str|bool|list|dict|tuple|type)\\b"
+        },
+        {
+          "name": "support.function.builtin.math.easyscript",
+          "match": "\\b(abs|max|min|sum|round|len)\\b"
+        },
+        {
+          "name": "support.function.builtin.collection.easyscript",
+          "match": "\\b(range|sorted|reversed|enumerate|zip|all|any)\\b"
+        },
+        {
+          "name": "support.function.builtin.random.easyscript",
+          "match": "\\b(random|choice|shuffle|randrange|uniform)\\b"
+        },
+        {
+          "name": "support.function.builtin.time.easyscript",
+          "match": "\\b(current_time|current_date|current_datetime|timestamp)\\b"
+        },
+        {
+          "name": "support.function.method.string.easyscript",
+          "match": "\\.(upper|lower|split|replace|strip|title|startswith|endswith|join)\\b"
+        },
+        {
+          "name": "support.function.method.list.easyscript",
+          "match": "\\.(append|remove|pop|sort|reverse|index|count|insert|extend|clear|copy)\\b"
+        },
+        {
+          "name": "support.function.builtin.window.easyscript",
+          "match": "\\b(createWindow|setWindowTitle|setWindowSize|setBackground|setWindowIcon|removeWindowIcon|showWindow|closeWindow|clearWindow|updateWindow)\\b"
+        },
+        {
+          "name": "support.function.builtin.draw.easyscript",
+          "match": "\\b(drawCircle|drawRectangle|drawLine|drawText|loadImage)\\b"
+        },
+        {
+          "name": "support.function.builtin.keyboard.easyscript",
+          "match": "\\b(onKeyDown|onKeyUp|keyStates)\\b"
+        }
+      ]
+    },
+
+    "operators": {
+      "patterns": [
+        {
+          "name": "keyword.operator.comparison.natural.easyscript",
+          "match": "\\bis equal to\\b|\\bis not equal to\\b|\\bis greater than\\b|\\bis less than\\b|\\bis greater or equal to\\b|\\bis lesser or equal to\\b|\\bis not\\b|\\bis\\b"
+        },
+        {
+          "name": "keyword.operator.logical.easyscript",
+          "match": "\\b(and|or|not)\\b"
+        },
+        {
+          "name": "keyword.operator.comparison.easyscript",
+          "match": "==|!=|<=|>=|<|>"
+        },
+        {
+          "name": "keyword.operator.arithmetic.easyscript",
+          "match": "\\+|\\-|\\*|\\/\\/|\\/|\\%|\\*\\*"
+        },
+        {
+          "name": "keyword.operator.assignment.augmented.easyscript",
+          "match": "\\+=|\\-=|\\*=|\\/\\/=|\\/=|\\%=|\\*\\*="
+        }
+      ]
+    },
+
+    "variables": {
+      "patterns": [
+        {
+          "name": "variable.other.easyscript",
+          "match": "\\b[A-Za-z_][A-Za-z0-9_]*\\b"
+        }
+      ]
+    }
+  }
+}
