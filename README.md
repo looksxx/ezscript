@@ -1,6 +1,7 @@
 # EzScript Language Support for Visual Studio Code (BETA VERSION‼)
 
 This extension provides comprehensive language support for **EzScript** within Visual Studio Code.
+My Language can have errors.
 
 ## Features
 
