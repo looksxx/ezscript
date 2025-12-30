@@ -19,8 +19,6 @@ This extension provides comprehensive language support for **EzScript** within V
 
 Open any `.ez` file to activate EzScript language features.
 
-When the extension activates it will attempt to download the interpreter into the extension's global storage folder and use it from there. This keeps the VSIX small and avoids the "file is large" publishing error.
-
 ## About EzScript
 
 EzScript is a beginner-friendly, English-like programming language designed to be simple, readable, and powerful.
@@ -28,12 +26,17 @@ EzScript is a beginner-friendly, English-like programming language designed to b
 Example:
 
 ```
-function factorial(n):
-    if n is equal to 0 then
-        return 1
-    else:
-        return n * factorial(n - 1)
+# Hello world
+print("Hello, EzScript!")
 
-let x be input("Enter a number: ")
-let result be factorial(int(x))
-print "Factorial of {x} is {result}"
+# Variables
+let name be "Player"
+let score be 10
+
+# Condition
+if score > 5:
+    print("Welcome {name}, your score is {score}")
+
+# Loop
+loop 3 times:
+    print("EzScript is easy")
